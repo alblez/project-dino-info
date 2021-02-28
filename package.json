@@ -1,0 +1,19 @@
+{
+  "name": "dinosaurs-infographic",
+  "version": "1.0.0",
+  "description": "## Student Instructions",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alblez/Dinosaurs-Infographic.git"
+  },
+  "author": "Alberto Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alblez/Dinosaurs-Infographic/issues"
+  },
+  "homepage": "https://github.com/alblez/Dinosaurs-Infographic#readme"
+}
