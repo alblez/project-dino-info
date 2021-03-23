@@ -15,26 +15,28 @@ const dataForm = (function () {
 
     function getElementValue(inputName) {
         let input = document.getElementById(inputName).value;
-        const numberTypes = ['feet', 'inches', 'weight'];
+        // const numberTypes = ['feet', 'inches', 'weight'];
 
         if (input.trim() === '') {
             alert(`${inputName} can not be empty`);
-            // throw new Error(`${inputName} can not be empty`);
+            throw new Error(`${inputName} can not be empty`);
         }
 
+        if (!['feet', 'inches', 'weight'].includes(inputName)) {
 
-        if (numberTypes.includes(inputName)) {
-            input = parseInt(input);
-            if (!Number.isInteger(input)) {
-                alert(`${inputName} must be a number`);
-                // throw new Error(`${inputName} must must be a number`);
-            }
+            return input;
+        }
 
-            if (!input > 0) {
-                console.log('included! ' + parseInt(input));
-                alert(`${inputName} must be highter than zero`);
-                // throw new Error(`${inputName} must be highter than zero`);
-            }
+        input = parseInt(input);
+
+        if (!Number.isInteger(input)) {
+            alert(`${inputName} must be a number`);
+            throw new Error(`${inputName} must must be a number`);
+        }
+
+        if (!input > 0) {
+            alert(`${inputName} must be highter than zero`);
+            throw new Error(`${inputName} must be highter than zero`);
         }
 
         return input;
